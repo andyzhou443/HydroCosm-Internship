@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.ProfileActivity">
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:background="#32CD32"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="200dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginBottom="13dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/document" />
+
+            <ImageView
+                android:id="@+id/imageView2"
+                android:layout_width="50dp"
+                android:layout_height="48dp"
+                android:layout_marginTop="11dp"
+                android:layout_marginEnd="28dp"
+                android:layout_marginRight="28dp"
+                android:layout_marginBottom="11dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="1.0"
+                app:srcCompat="@drawable/test1logoonly" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/imageView7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="25dp"
+                android:layout_marginLeft="25dp"
+                android:layout_marginTop="25dp"
+                android:background="@drawable/roundstyle"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:srcCompat="@tools:sample/avatars" />
+
+            <Button
+                android:id="@+id/logOutButton"
+                android:layout_width="100dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="120dp"
+                android:background="@drawable/roundstyle"
+                android:cursorVisible="true"
+                android:fontFamily="sans-serif"
+                android:insetTop="0dp"
+                android:insetBottom="0dp"
+                android:text="@string/Sign_In"
+                android:textColor="#777777"
+                android:textSize="14sp"
+                app:backgroundTint="#FFFFFF"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toEndOf="@+id/imageView7"
+                app:layout_constraintTop_toTopOf="parent"
+                app:strokeColor="#000000"
+                tools:text="Logout" />
+
+            <TextView
+                android:id="@+id/Username"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="30dp"
+                android:text="Joe Coffey"
+                android:textColor="#000000"
+                android:textSize="24sp"
+                app:layout_constraintStart_toEndOf="@+id/imageView7"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/StaticEmail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="5dp"
+                android:text="joeC@gmail.com"
+                app:layout_constraintStart_toEndOf="@+id/imageView7"
+                app:layout_constraintTop_toBottomOf="@+id/Username" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="180dp"
+                android:orientation="vertical"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <Button
+                    android:id="@+id/PaymentMethodButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:gravity="left|center_vertical"
+                    android:textAllCaps="false"
+                    android:stateListAnimator="@null"
+                    android:text="Payment Method"
+                    android:textSize="18sp"
+                    android:textColor="#000000"
+                    app:backgroundTint="#FFFFFF" />
+
+                <Button
+                    android:id="@+id/settingsButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:gravity="left|center_vertical"
+                    android:stateListAnimator="@null"
+                    android:text="Settings"
+                    android:textSize="18sp"
+                    android:textAllCaps="false"
+                    android:textColor="#000000"
+                    app:backgroundTint="#FFFFFF" />
+
+                <Button
+                    android:id="@+id/ContactButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:gravity="left|center_vertical"
+                    android:stateListAnimator="@null"
+                    android:text="Contact Us"
+                    android:textSize="18sp"
+                    android:textAllCaps="false"
+                    android:textColor="#000000"
+                    app:backgroundTint="#FFFFFF" />
+
+                <Button
+                    android:id="@+id/TermsButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:gravity="left|center_vertical"
+                    android:stateListAnimator="@null"
+                    android:text="Terms of Service"
+                    android:textSize="18sp"
+                    android:textColor="#000000"
+                    android:textAllCaps="false"
+                    app:backgroundTint="#FFFFFF" />
+
+                <Button
+                    android:id="@+id/PrivacyPolicyButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:textAllCaps="false"
+                    android:gravity="left|center_vertical"
+                    android:stateListAnimator="@null"
+                    android:text="Privacy Policy"
+                    android:textSize="18sp"
+                    android:textColor="#000000"
+                    app:backgroundTint="#FFFFFF" />
+
+                <Button
+                    android:id="@+id/FeedbackButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:gravity="left|center_vertical"
+                    android:stateListAnimator="@null"
+                    android:text="Feedback"
+                    android:textSize="18sp"
+                    android:textAllCaps="false"
+                    android:textColor="#000000"
+                    app:backgroundTint="#FFFFFF" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/StaticCar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="6dp"
+                android:text="Toyota Mirai 2021"
+                app:layout_constraintBottom_toTopOf="@+id/logOutButton"
+                app:layout_constraintStart_toEndOf="@+id/imageView7"
+                app:layout_constraintTop_toBottomOf="@+id/StaticEmail" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:background="#32CD32"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/MapButton"
+                    android:layout_width="103dp"
+                    android:layout_height="62dp"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginBottom="4dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.0"
+                    app:srcCompat="@drawable/outline_location_on_white_24dp" />
+
+                <ImageButton
+                    android:id="@+id/BookmarkButton"
+                    android:layout_width="103dp"
+                    android:layout_height="62dp"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginBottom="4dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/TripButton"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/outline_directions_car_white_24dp" />
+
+                <ImageButton
+                    android:id="@+id/TripButton"
+                    android:layout_width="103dp"
+                    android:layout_height="62dp"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginBottom="4dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/MapButton"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/outline_bookmark_white_24dp" />
+
+                <ImageButton
+                    android:id="@+id/ProfileButton"
+                    android:layout_width="103dp"
+                    android:layout_height="62dp"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginBottom="4dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/BookmarkButton"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/outline_person_outline_white_24dp" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

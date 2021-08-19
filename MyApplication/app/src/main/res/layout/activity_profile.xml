@@ -81,7 +81,7 @@
                 android:layout_height="30dp"
                 android:layout_marginStart="20dp"
                 android:layout_marginLeft="20dp"
-                android:layout_marginTop="120dp"
+                android:layout_marginTop="5dp"
                 android:background="@drawable/roundstyle"
                 android:cursorVisible="true"
                 android:fontFamily="sans-serif"
@@ -94,7 +94,7 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toEndOf="@+id/imageView7"
-                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/StaticCar"
                 app:strokeColor="#000000"
                 tools:text="Logout" />
 
@@ -118,7 +118,7 @@
                 android:layout_marginStart="20dp"
                 android:layout_marginLeft="20dp"
                 android:layout_marginTop="5dp"
-                android:text="joeC@gmail.com"
+                android:text="@string/JoeCEmail"
                 app:layout_constraintStart_toEndOf="@+id/imageView7"
                 app:layout_constraintTop_toBottomOf="@+id/Username" />
 
@@ -127,18 +127,20 @@
                 android:layout_height="match_parent"
                 android:layout_marginTop="180dp"
                 android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent">
 
                 <Button
-                    android:id="@+id/PaymentMethodButton"
+                    android:id="@+id/paymentMethodButton"
                     android:layout_width="match_parent"
                     android:layout_height="60dp"
-                    android:gravity="left|center_vertical"
-                    android:textAllCaps="false"
+                    android:gravity="start|center_vertical"
                     android:stateListAnimator="@null"
-                    android:text="Payment Method"
-                    android:textSize="18sp"
+                    android:text="@string/PaymentMethod"
+                    android:textAllCaps="false"
                     android:textColor="#000000"
+                    android:textSize="18sp"
                     app:backgroundTint="#FFFFFF" />
 
                 <Button
@@ -148,57 +150,57 @@
                     android:gravity="left|center_vertical"
                     android:stateListAnimator="@null"
                     android:text="Settings"
-                    android:textSize="18sp"
                     android:textAllCaps="false"
                     android:textColor="#000000"
+                    android:textSize="18sp"
                     app:backgroundTint="#FFFFFF" />
 
                 <Button
-                    android:id="@+id/ContactButton"
+                    android:id="@+id/contactButton"
                     android:layout_width="match_parent"
                     android:layout_height="60dp"
-                    android:gravity="left|center_vertical"
+                    android:gravity="start|center_vertical"
                     android:stateListAnimator="@null"
                     android:text="Contact Us"
-                    android:textSize="18sp"
                     android:textAllCaps="false"
                     android:textColor="#000000"
+                    android:textSize="18sp"
                     app:backgroundTint="#FFFFFF" />
 
                 <Button
-                    android:id="@+id/TermsButton"
+                    android:id="@+id/termsButton"
                     android:layout_width="match_parent"
                     android:layout_height="60dp"
-                    android:gravity="left|center_vertical"
+                    android:gravity="start|center_vertical"
                     android:stateListAnimator="@null"
                     android:text="Terms of Service"
-                    android:textSize="18sp"
-                    android:textColor="#000000"
                     android:textAllCaps="false"
+                    android:textColor="#000000"
+                    android:textSize="18sp"
                     app:backgroundTint="#FFFFFF" />
 
                 <Button
                     android:id="@+id/PrivacyPolicyButton"
                     android:layout_width="match_parent"
                     android:layout_height="60dp"
-                    android:textAllCaps="false"
-                    android:gravity="left|center_vertical"
+                    android:gravity="start|center_vertical"
                     android:stateListAnimator="@null"
                     android:text="Privacy Policy"
-                    android:textSize="18sp"
+                    android:textAllCaps="false"
                     android:textColor="#000000"
+                    android:textSize="18sp"
                     app:backgroundTint="#FFFFFF" />
 
                 <Button
                     android:id="@+id/FeedbackButton"
                     android:layout_width="match_parent"
                     android:layout_height="60dp"
-                    android:gravity="left|center_vertical"
+                    android:gravity="start|center_vertical"
                     android:stateListAnimator="@null"
                     android:text="Feedback"
-                    android:textSize="18sp"
                     android:textAllCaps="false"
                     android:textColor="#000000"
+                    android:textSize="18sp"
                     app:backgroundTint="#FFFFFF" />
             </LinearLayout>
 
@@ -209,9 +211,7 @@
                 android:layout_marginStart="20dp"
                 android:layout_marginLeft="20dp"
                 android:layout_marginTop="5dp"
-                android:layout_marginBottom="6dp"
-                android:text="Toyota Mirai 2021"
-                app:layout_constraintBottom_toTopOf="@+id/logOutButton"
+                android:text="@string/Car"
                 app:layout_constraintStart_toEndOf="@+id/imageView7"
                 app:layout_constraintTop_toBottomOf="@+id/StaticEmail" />
         </androidx.constraintlayout.widget.ConstraintLayout>
@@ -239,11 +239,12 @@
 
                 <ImageView
                     android:id="@+id/MapButton"
-                    android:layout_width="103dp"
+                    android:layout_width="0dp"
                     android:layout_height="62dp"
                     android:layout_marginTop="4dp"
                     android:layout_marginBottom="4dp"
                     app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/TripButton"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintVertical_bias="0.0"
@@ -251,29 +252,32 @@
 
                 <ImageButton
                     android:id="@+id/BookmarkButton"
-                    android:layout_width="103dp"
                     android:layout_height="62dp"
                     android:layout_marginTop="4dp"
+                    android:layout_marginEnd="2dp"
+                    android:layout_marginRight="2dp"
                     android:layout_marginBottom="4dp"
                     app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/ProfileButton"
                     app:layout_constraintStart_toEndOf="@+id/TripButton"
                     app:layout_constraintTop_toTopOf="parent"
                     app:srcCompat="@drawable/outline_directions_car_white_24dp" />
 
                 <ImageButton
                     android:id="@+id/TripButton"
-                    android:layout_width="103dp"
+                    android:layout_width="0dp"
                     android:layout_height="62dp"
                     android:layout_marginTop="4dp"
                     android:layout_marginBottom="4dp"
                     app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/BookmarkButton"
                     app:layout_constraintStart_toEndOf="@+id/MapButton"
                     app:layout_constraintTop_toTopOf="parent"
                     app:srcCompat="@drawable/outline_bookmark_white_24dp" />
 
                 <ImageButton
                     android:id="@+id/ProfileButton"
-                    android:layout_width="103dp"
+                    android:layout_width="0dp"
                     android:layout_height="62dp"
                     android:layout_marginTop="4dp"
                     android:layout_marginBottom="4dp"

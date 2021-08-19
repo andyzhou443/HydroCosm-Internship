@@ -7,43 +7,70 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 import android.view.View;
+import android.content.Intent;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements  View.OnClickListener{
 
-    ////initialize
-    //SignInButton.setOnClickListener(this); // used for the toast message
-    ////initialize
-    //signUpButton.setOnClickListener(this); // used for the toast message
-    ////initialize
-    //AdministratorSignInButton.setOnClickListener(this); // used for the toast message
+    private EditText editTextTextUsername;
+    private EditText editTextTextPassword;
+    private Button signInButton;
+    private Button signUpButton;
+    private Button administratorSignInButton;
+    public String Username = "JoeC", Password = "HydroCosm";
 
-    private EditText editTextTextUsername, editTextTextPassword;
-    private Button signInButton, signUpButton, administratorSignInButton;
+    public void onClick(View v){
+        switch (v.getId()){
+            /*
+            case R.id.signInButton:
+                if ((editTextTextUsername.toString() == Username) && (editTextTextPassword.toString() == Password)) {
+                    Toast.makeText(MainActivity.this, "Login Successful", Toast.LENGTH_SHORT).show();
+                    Intent intent = new Intent(MainActivity.this, MainMap.class);
 
+                }
+                else {
+                    Toast.makeText(MainActivity.this, "Login Failed", Toast.LENGTH_SHORT).show();
+                }
+*/
+            case R.id.signUpButton:
+            case R.id.administratorSignInButton:
+                Toast.makeText(MainActivity.this, "Feature not Implemented", Toast.LENGTH_SHORT).show();
+                break;
+        }
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        editTextTextUsername = findViewById(R.id.editTextTextUsername);
-        editTextTextPassword = findViewById(R.id.editTextTextPassword);
-        signInButton = findViewById(R.id.signInButton);
-        signUpButton = findViewById(R.id.signUpButton);
-        administratorSignInButton = findViewById(R.id.administratorSignInButton);
+        editTextTextUsername = (EditText) findViewById(R.id.editTextTextUsername);
+        editTextTextPassword = (EditText) findViewById(R.id.editTextTextPassword);
+        signInButton = (Button) findViewById(R.id.signInButton);
+
+        signUpButton = (Button) findViewById(R.id.signUpButton);
+        signUpButton.setOnClickListener(this);
+        administratorSignInButton = (Button) findViewById(R.id.administratorSignInButton);
+        administratorSignInButton.setOnClickListener(this);
+
+        signInButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                validate(editTextTextUsername.getText().toString(), editTextTextPassword.getText().toString());
+            }
+        });
 
     }
 
-
-    public void signIn(View v) {
-        Button signInButton = findViewById(R.id.signInButton);
-        if (editTextTextUsername.toString() == "JoeC" && editTextTextPassword.toString() == "HydroCosm" ) {
-            Toast.makeText(MainActivity.this, "Login Successful", Toast.LENGTH_SHORT).show();
-
-            }
+    private void validate (String userName, String userPassword){
+        if ((userName.equals("JoeC")) && (userPassword.equals("HydroCosm"))){
+            Intent intent = new Intent (MainActivity.this, MainMap.class);
+            startActivity(intent);
+        }
         else {
             Toast.makeText(MainActivity.this, "Login Failed", Toast.LENGTH_SHORT).show();
         }
     }
+
+
 
 }

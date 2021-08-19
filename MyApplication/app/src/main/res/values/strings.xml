@@ -9,15 +9,19 @@
     <string name="invalid_username">Not a valid username</string>
     <string name="invalid_password">Password must be >5 characters</string>
     <string name="login_failed">"Login failed"</string>
-    <string name="Sign_In" > Sign In </string>
-    <string name="HydroCosmCopyright" > 2021 HydroCosm LLC </string>
-    <string name="Sign_Up" > Sign Up </string>
-    <string name="AdminSignIn" > Administrator Sign In </string>
+    <string name="Sign_In"> Sign In </string>
+    <string name="HydroCosmCopyright"> 2021 HydroCosm LLC </string>
+    <string name="Sign_Up"> Sign Up </string>
+    <string name="AdminSignIn"> Administrator Sign In </string>
     <string name="password">Password</string>
     <string name="username">Username</string>
     <string name="AlbanyFrontLogo">TODO</string>
     <string name="h2_made_accessible">H2 made Accessible</string>
     <string name="todo">TODO</string>
-    <string name="HydroCosmFrontLogo">TODO</string>
-    <string name="CopyrightLogo">TODO</string>
+    <string name="HydroCosmFrontLogo">HydroCosm Logo</string>
+    <string name="CopyrightLogo">Copyright Logo</string>
+    <string name="PaymentMethod">Payment Method</string>
+    <string name="Car">Toyota Mirai 2021</string>
+    <string name="JoeC">Joe Coffey</string>
+    <string name="JoeCEmail">joeC@gmail.com</string>
 </resources>

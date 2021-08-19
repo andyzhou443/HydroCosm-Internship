@@ -20,17 +20,6 @@ public class MainActivity extends AppCompatActivity implements  View.OnClickList
 
     public void onClick(View v){
         switch (v.getId()){
-            /*
-            case R.id.signInButton:
-                if ((editTextTextUsername.toString() == Username) && (editTextTextPassword.toString() == Password)) {
-                    Toast.makeText(MainActivity.this, "Login Successful", Toast.LENGTH_SHORT).show();
-                    Intent intent = new Intent(MainActivity.this, MainMap.class);
-
-                }
-                else {
-                    Toast.makeText(MainActivity.this, "Login Failed", Toast.LENGTH_SHORT).show();
-                }
-*/
             case R.id.signUpButton:
             case R.id.administratorSignInButton:
                 Toast.makeText(MainActivity.this, "Feature not Implemented", Toast.LENGTH_SHORT).show();
@@ -55,7 +44,7 @@ public class MainActivity extends AppCompatActivity implements  View.OnClickList
         signInButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                validate(editTextTextUsername.getText().toString(), editTextTextPassword.getText().toString());
+                validate(editTextTextUsername.getText().toString(), editTextTextPassword.getText().toString()); //turns user text to strings
             }
         });
 

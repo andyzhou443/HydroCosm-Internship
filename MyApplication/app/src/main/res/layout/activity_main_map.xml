@@ -77,6 +77,7 @@
                 android:textSize="12sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
+
         </androidx.constraintlayout.widget.ConstraintLayout>
 
     </LinearLayout>
@@ -100,51 +101,63 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
 
-                <ImageView
-                    android:id="@+id/MapButton"
-                    android:layout_width="103dp"
+                <ImageButton
+                    android:id="@+id/mapButton"
+                    android:layout_width="0dp"
                     android:layout_height="62dp"
                     android:layout_marginTop="4dp"
                     android:layout_marginBottom="4dp"
+                    android:background="@null"
+                    android:onClick="onClick"
                     app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/bookmarkButton"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintVertical_bias="0.0"
                     app:srcCompat="@drawable/outline_location_on_white_24dp" />
 
                 <ImageButton
-                    android:id="@+id/BookmarkButton"
-                    android:layout_width="103dp"
+                    android:id="@+id/tripButton"
+                    android:layout_width="0dp"
                     android:layout_height="62dp"
                     android:layout_marginTop="4dp"
                     android:layout_marginBottom="4dp"
+                    android:background="@null"
+                    android:onClick="onClick"
                     app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintStart_toEndOf="@+id/TripButton"
+                    app:layout_constraintEnd_toStartOf="@+id/profileButton"
+                    app:layout_constraintStart_toEndOf="@+id/bookmarkButton"
                     app:layout_constraintTop_toTopOf="parent"
                     app:srcCompat="@drawable/outline_directions_car_white_24dp" />
 
                 <ImageButton
-                    android:id="@+id/TripButton"
-                    android:layout_width="103dp"
+                    android:id="@+id/bookmarkButton"
+                    android:layout_width="0dp"
                     android:layout_height="62dp"
                     android:layout_marginTop="4dp"
                     android:layout_marginBottom="4dp"
+                    android:background="@null"
+                    android:onClick="onClick"
                     app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintStart_toEndOf="@+id/MapButton"
+                    app:layout_constraintEnd_toStartOf="@+id/tripButton"
+                    app:layout_constraintStart_toEndOf="@+id/mapButton"
                     app:layout_constraintTop_toTopOf="parent"
                     app:srcCompat="@drawable/outline_bookmark_white_24dp" />
 
                 <ImageButton
-                    android:id="@+id/ProfileButton"
-                    android:layout_width="103dp"
+                    android:id="@+id/profileButton"
+                    android:layout_width="0dp"
                     android:layout_height="62dp"
                     android:layout_marginTop="4dp"
                     android:layout_marginBottom="4dp"
+                    android:background="@null"
+                    android:onClick="onClick"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toEndOf="@+id/BookmarkButton"
+                    app:layout_constraintStart_toEndOf="@+id/tripButton"
                     app:layout_constraintTop_toTopOf="parent"
                     app:srcCompat="@drawable/outline_person_outline_white_24dp" />
+
             </androidx.constraintlayout.widget.ConstraintLayout>
         </LinearLayout>
 

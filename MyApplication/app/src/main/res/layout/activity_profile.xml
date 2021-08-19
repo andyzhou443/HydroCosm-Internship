@@ -4,7 +4,85 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.ProfileActivity">
+    android:background="@color/white"
+    tools:context=".ProfileActivity">
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:background="#32CD32"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageButton
+                    android:id="@+id/mapButton"
+                    android:layout_width="0dp"
+                    android:layout_height="62dp"
+                    android:background="@null"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginBottom="4dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/bookmarkButton"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.0"
+                    app:srcCompat="@drawable/outline_location_on_white_24dp" />
+
+                <ImageButton
+                    android:id="@+id/tripButton"
+                    android:layout_width="0dp"
+                    android:layout_height="62dp"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginBottom="4dp"
+                    android:background="@null"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/profileButton"
+                    app:layout_constraintStart_toEndOf="@+id/bookmarkButton"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/outline_directions_car_white_24dp" />
+
+                <ImageButton
+                    android:id="@+id/bookmarkButton"
+                    android:layout_width="0dp"
+                    android:layout_height="62dp"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginBottom="4dp"
+                    android:background="@null"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/tripButton"
+                    app:layout_constraintStart_toEndOf="@+id/mapButton"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/outline_bookmark_white_24dp" />
+
+                <ImageButton
+                    android:id="@+id/profileButton"
+                    android:layout_width="0dp"
+                    android:layout_height="62dp"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginBottom="4dp"
+                    android:background="@null"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/tripButton"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/outline_person_outline_white_24dp" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </LinearLayout>
+
+    </LinearLayout>
 
     <LinearLayout
         android:id="@+id/linearLayout"
@@ -21,6 +99,17 @@
             android:layout_height="match_parent">
 
             <ImageView
+                android:id="@+id/imageView3"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_marginEnd="28dp"
+                android:layout_marginRight="28dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/test1logoonly" />
+
+            <ImageView
                 android:id="@+id/imageView"
                 android:layout_width="200dp"
                 android:layout_height="50dp"
@@ -33,19 +122,6 @@
                 app:layout_constraintTop_toTopOf="parent"
                 app:srcCompat="@drawable/document" />
 
-            <ImageView
-                android:id="@+id/imageView2"
-                android:layout_width="50dp"
-                android:layout_height="48dp"
-                android:layout_marginTop="11dp"
-                android:layout_marginEnd="28dp"
-                android:layout_marginRight="28dp"
-                android:layout_marginBottom="11dp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="1.0"
-                app:srcCompat="@drawable/test1logoonly" />
         </androidx.constraintlayout.widget.ConstraintLayout>
 
     </LinearLayout>
@@ -54,7 +130,7 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:orientation="vertical"
-        app:layout_constraintBottom_toTopOf="@+id/linearLayout2"
+        android:background="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout">
@@ -76,7 +152,7 @@
                 tools:srcCompat="@tools:sample/avatars" />
 
             <Button
-                android:id="@+id/logOutButton"
+                android:id="@+id/logoutButton"
                 android:layout_width="100dp"
                 android:layout_height="30dp"
                 android:layout_marginStart="20dp"
@@ -87,7 +163,7 @@
                 android:fontFamily="sans-serif"
                 android:insetTop="0dp"
                 android:insetBottom="0dp"
-                android:text="@string/Sign_In"
+                android:text="Logout"
                 android:textColor="#777777"
                 android:textSize="14sp"
                 app:backgroundTint="#FFFFFF"
@@ -127,6 +203,7 @@
                 android:layout_height="match_parent"
                 android:layout_marginTop="180dp"
                 android:orientation="vertical"
+                android:background="@color/white"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent">
@@ -180,7 +257,7 @@
                     app:backgroundTint="#FFFFFF" />
 
                 <Button
-                    android:id="@+id/PrivacyPolicyButton"
+                    android:id="@+id/privacyPolicyButton"
                     android:layout_width="match_parent"
                     android:layout_height="60dp"
                     android:gravity="start|center_vertical"
@@ -192,7 +269,7 @@
                     app:backgroundTint="#FFFFFF" />
 
                 <Button
-                    android:id="@+id/FeedbackButton"
+                    android:id="@+id/feedbackButton"
                     android:layout_width="match_parent"
                     android:layout_height="60dp"
                     android:gravity="start|center_vertical"
@@ -215,79 +292,6 @@
                 app:layout_constraintStart_toEndOf="@+id/imageView7"
                 app:layout_constraintTop_toBottomOf="@+id/StaticEmail" />
         </androidx.constraintlayout.widget.ConstraintLayout>
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/linearLayout2"
-        android:layout_width="match_parent"
-        android:layout_height="70dp"
-        android:background="#32CD32"
-        android:orientation="vertical"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent">
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="horizontal">
-
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
-
-                <ImageView
-                    android:id="@+id/MapButton"
-                    android:layout_width="0dp"
-                    android:layout_height="62dp"
-                    android:layout_marginTop="4dp"
-                    android:layout_marginBottom="4dp"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toStartOf="@+id/TripButton"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintVertical_bias="0.0"
-                    app:srcCompat="@drawable/outline_location_on_white_24dp" />
-
-                <ImageButton
-                    android:id="@+id/BookmarkButton"
-                    android:layout_height="62dp"
-                    android:layout_marginTop="4dp"
-                    android:layout_marginEnd="2dp"
-                    android:layout_marginRight="2dp"
-                    android:layout_marginBottom="4dp"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toStartOf="@+id/ProfileButton"
-                    app:layout_constraintStart_toEndOf="@+id/TripButton"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:srcCompat="@drawable/outline_directions_car_white_24dp" />
-
-                <ImageButton
-                    android:id="@+id/TripButton"
-                    android:layout_width="0dp"
-                    android:layout_height="62dp"
-                    android:layout_marginTop="4dp"
-                    android:layout_marginBottom="4dp"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toStartOf="@+id/BookmarkButton"
-                    app:layout_constraintStart_toEndOf="@+id/MapButton"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:srcCompat="@drawable/outline_bookmark_white_24dp" />
-
-                <ImageButton
-                    android:id="@+id/ProfileButton"
-                    android:layout_width="0dp"
-                    android:layout_height="62dp"
-                    android:layout_marginTop="4dp"
-                    android:layout_marginBottom="4dp"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toEndOf="@+id/BookmarkButton"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:srcCompat="@drawable/outline_person_outline_white_24dp" />
-            </androidx.constraintlayout.widget.ConstraintLayout>
-        </LinearLayout>
 
     </LinearLayout>
 

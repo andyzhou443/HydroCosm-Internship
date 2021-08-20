@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
+import android.widget.Toast;
 
 public class CarActivity extends AppCompatActivity implements  View.OnClickListener{
 
@@ -14,17 +15,21 @@ public class CarActivity extends AppCompatActivity implements  View.OnClickListe
     public void onClick(View v){
         switch (v.getId()){
             case R.id.bookmarkButton:
-                Intent intent = new Intent (CarActivity.this, BookmarkActivity.class);
-                startActivity(intent);
+                Intent intentTwo = new Intent (CarActivity.this, BookmarkActivity.class);
+                startActivity(intentTwo);
+                overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_right);
                 break;
             case R.id.mapButton:
-                intent = new Intent (CarActivity.this, MainMap.class);
-                startActivity(intent);
+                intentTwo = new Intent (CarActivity.this, MainMap.class);
+                startActivity(intentTwo);
+                overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_right);
                 break;
             case R.id.profileButton:
-                intent = new Intent (CarActivity.this, ProfileActivity.class);
-                startActivity(intent);
+                intentTwo = new Intent (CarActivity.this, ProfileActivity.class);
+                startActivity(intentTwo);
+                overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
                 break;
+
         }
     }
 

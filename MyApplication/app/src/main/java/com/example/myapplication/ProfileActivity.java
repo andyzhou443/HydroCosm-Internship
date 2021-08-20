@@ -12,7 +12,7 @@ import android.widget.Toast;
 public class ProfileActivity extends AppCompatActivity implements  View.OnClickListener{
 
     private Button paymentMethodButton, settingsButton, contactButton, termsButton, privacyPolicyButton, feedbackButton,logoutButton;
-    private ImageButton mapButton, bookmarkButton, tripButton, profileButton;
+    private ImageButton mapButton, bookmarkButton, tripButton4, profileButton;
 
     public void onClick(View v){
         switch (v.getId()){
@@ -28,14 +28,17 @@ public class ProfileActivity extends AppCompatActivity implements  View.OnClickL
             case R.id.mapButton:
                 Intent intent = new Intent (ProfileActivity.this, MainMap.class);
                 startActivity(intent);
+                overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_right);
                 break;
             case R.id.bookmarkButton:
                 intent = new Intent (ProfileActivity.this, BookmarkActivity.class);
                 startActivity(intent);
+                overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_right);
                 break;
             case R.id.tripButton:
                 intent = new Intent (ProfileActivity.this, CarActivity.class);
                 startActivity(intent);
+                overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_right);
                 break;
             case R.id.logoutButton:
                 Toast.makeText(ProfileActivity.this, "Logout Successful", Toast.LENGTH_SHORT).show();
@@ -57,9 +60,10 @@ public class ProfileActivity extends AppCompatActivity implements  View.OnClickL
         termsButton = (Button) findViewById(R.id.termsButton);
         privacyPolicyButton = (Button) findViewById(R.id.privacyPolicyButton);
         feedbackButton = (Button) findViewById(R.id.feedbackButton);
+
         mapButton = (ImageButton) findViewById(R.id.mapButton);
         bookmarkButton = (ImageButton) findViewById(R.id.bookmarkButton);
-        tripButton = (ImageButton) findViewById(R.id.tripButton);
+        tripButton4 = (ImageButton) findViewById(R.id.tripButton);
         profileButton = (ImageButton) findViewById(R.id.profileButton);
 
     }

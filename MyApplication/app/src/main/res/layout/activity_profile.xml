@@ -31,6 +31,7 @@
                     android:layout_width="0dp"
                     android:layout_height="62dp"
                     android:background="@null"
+                    android:onClick="onClick"
                     android:layout_marginTop="4dp"
                     android:layout_marginBottom="4dp"
                     app:layout_constraintBottom_toBottomOf="parent"
@@ -46,6 +47,7 @@
                     android:layout_height="62dp"
                     android:layout_marginTop="4dp"
                     android:layout_marginBottom="4dp"
+                    android:onClick="onClick"
                     android:background="@null"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toStartOf="@+id/profileButton"
@@ -59,6 +61,7 @@
                     android:layout_height="62dp"
                     android:layout_marginTop="4dp"
                     android:layout_marginBottom="4dp"
+                    android:onClick="onClick"
                     android:background="@null"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toStartOf="@+id/tripButton"
@@ -72,6 +75,7 @@
                     android:layout_height="62dp"
                     android:layout_marginTop="4dp"
                     android:layout_marginBottom="4dp"
+                    android:onClick="onClick"
                     android:background="@null"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
@@ -140,16 +144,16 @@
             android:layout_height="match_parent">
 
             <ImageView
-                android:id="@+id/imageView7"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:id="@+id/AndroidProfileImage"
+                android:layout_width="140dp"
+                android:layout_height="140dp"
                 android:layout_marginStart="25dp"
                 android:layout_marginLeft="25dp"
                 android:layout_marginTop="25dp"
-                android:background="@drawable/roundstyle"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                tools:srcCompat="@tools:sample/avatars" />
+                app:srcCompat="@drawable/androidprofile"
+                tools:srcCompat="@drawable/androidprofile" />
 
             <Button
                 android:id="@+id/logoutButton"
@@ -161,6 +165,7 @@
                 android:background="@drawable/roundstyle"
                 android:cursorVisible="true"
                 android:fontFamily="sans-serif"
+                android:onClick="onClick"
                 android:insetTop="0dp"
                 android:insetBottom="0dp"
                 android:text="Logout"
@@ -169,7 +174,7 @@
                 app:backgroundTint="#FFFFFF"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toEndOf="@+id/imageView7"
+                app:layout_constraintStart_toEndOf="@+id/AndroidProfileImage"
                 app:layout_constraintTop_toBottomOf="@+id/StaticCar"
                 app:strokeColor="#000000"
                 tools:text="Logout" />
@@ -184,7 +189,7 @@
                 android:text="Joe Coffey"
                 android:textColor="#000000"
                 android:textSize="24sp"
-                app:layout_constraintStart_toEndOf="@+id/imageView7"
+                app:layout_constraintStart_toEndOf="@+id/AndroidProfileImage"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
@@ -195,7 +200,7 @@
                 android:layout_marginLeft="20dp"
                 android:layout_marginTop="5dp"
                 android:text="@string/JoeCEmail"
-                app:layout_constraintStart_toEndOf="@+id/imageView7"
+                app:layout_constraintStart_toEndOf="@+id/AndroidProfileImage"
                 app:layout_constraintTop_toBottomOf="@+id/Username" />
 
             <LinearLayout
@@ -213,6 +218,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="60dp"
                     android:gravity="start|center_vertical"
+                    android:onClick="onClick"
                     android:stateListAnimator="@null"
                     android:text="@string/PaymentMethod"
                     android:textAllCaps="false"
@@ -227,6 +233,7 @@
                     android:gravity="left|center_vertical"
                     android:stateListAnimator="@null"
                     android:text="Settings"
+                    android:onClick="onClick"
                     android:textAllCaps="false"
                     android:textColor="#000000"
                     android:textSize="18sp"
@@ -239,6 +246,7 @@
                     android:gravity="start|center_vertical"
                     android:stateListAnimator="@null"
                     android:text="Contact Us"
+                    android:onClick="onClick"
                     android:textAllCaps="false"
                     android:textColor="#000000"
                     android:textSize="18sp"
@@ -251,6 +259,7 @@
                     android:gravity="start|center_vertical"
                     android:stateListAnimator="@null"
                     android:text="Terms of Service"
+                    android:onClick="onClick"
                     android:textAllCaps="false"
                     android:textColor="#000000"
                     android:textSize="18sp"
@@ -263,6 +272,7 @@
                     android:gravity="start|center_vertical"
                     android:stateListAnimator="@null"
                     android:text="Privacy Policy"
+                    android:onClick="onClick"
                     android:textAllCaps="false"
                     android:textColor="#000000"
                     android:textSize="18sp"
@@ -275,10 +285,12 @@
                     android:gravity="start|center_vertical"
                     android:stateListAnimator="@null"
                     android:text="Feedback"
+                    android:onClick="onClick"
                     android:textAllCaps="false"
                     android:textColor="#000000"
                     android:textSize="18sp"
                     app:backgroundTint="#FFFFFF" />
+
             </LinearLayout>
 
             <TextView
@@ -289,8 +301,9 @@
                 android:layout_marginLeft="20dp"
                 android:layout_marginTop="5dp"
                 android:text="@string/Car"
-                app:layout_constraintStart_toEndOf="@+id/imageView7"
+                app:layout_constraintStart_toEndOf="@+id/AndroidProfileImage"
                 app:layout_constraintTop_toBottomOf="@+id/StaticEmail" />
+
         </androidx.constraintlayout.widget.ConstraintLayout>
 
     </LinearLayout>

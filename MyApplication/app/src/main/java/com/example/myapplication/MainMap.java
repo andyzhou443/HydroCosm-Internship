@@ -49,33 +49,20 @@ public class MainMap extends AppCompatActivity implements OnMapReadyCallback
     @Override
 
 
-    public void onMapReady(GoogleMap googleMap) {
-        LatLng sydney = new LatLng(-34, 151);
-        googleMap.addMarker(new MarkerOptions().position(sydney).title("Marker in Sydney"));
-        googleMap.moveCamera(CameraUpdateFactory.newLatLng(sydney));
+    public void onMapReady(GoogleMap googleMap) { //google map point
+        LatLng AlbanyWaterBoard = new LatLng(42.6704464, -73.7322982);
+        googleMap.addMarker(new MarkerOptions().position(AlbanyWaterBoard).title("Albany Water Board"));
+        googleMap.moveCamera(CameraUpdateFactory.newLatLng(AlbanyWaterBoard));
+
+        LatLng AlbanyFeuraBushPlant = new LatLng(42.5509376, -73.8684123);
+        googleMap.addMarker(new MarkerOptions().position(AlbanyFeuraBushPlant).title("Albany Feura Bush Plant"));
+        googleMap.moveCamera(CameraUpdateFactory.newLatLng(AlbanyFeuraBushPlant));
+
+        LatLng WashingtonParkInn = new LatLng(42.6564274, -73.7750971);
+        googleMap.addMarker(new MarkerOptions().position(WashingtonParkInn).title("Washington Park Inn"));
+        googleMap.moveCamera(CameraUpdateFactory.newLatLng(WashingtonParkInn));
     }
-
-/*
-
-    @Nullable
-    @Override
-    public View onCreateView(@NonNull LayoutInflater inflater,
-                             @Nullable ViewGroup container,
-                             @Nullable Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.fragment_maps, container, false);
-    }
-
-    @Override
-    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
-        super.onViewCreated(view, savedInstanceState);
-        SupportMapFragment mapFragment =
-                (SupportMapFragment) getChildFragmentManager().findFragmentById(R.id.map);
-        if (mapFragment != null) {
-            mapFragment.getMapAsync(callback);
-        }
-    }
-*/
-
+    
 
     private ImageButton mapButton, bookmarkButton, tripButton, profileButton;
 

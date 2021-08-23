@@ -9,16 +9,21 @@ import android.view.View;
 import android.widget.ImageButton;
 import android.widget.Toast;
 
+import com.google.android.gms.maps.CameraUpdate;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
+import com.google.android.gms.maps.model.Marker;
 
 //import androidx.fragment.app.FragmentActivity;
 public class MainMap extends AppCompatActivity implements OnMapReadyCallback
 {
+
+    private ImageButton mapButton, bookmarkButton, tripButton, profileButton;
+    public LatLng AlbanyWaterBoard, AlbanyFeuraBushPlant, WashingtonParkInn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,7 +41,6 @@ public class MainMap extends AppCompatActivity implements OnMapReadyCallback
 
     }
 
-
     /**
      * Manipulates the map once available.
      * This callback is triggered when the map is ready to be used.
@@ -46,10 +50,9 @@ public class MainMap extends AppCompatActivity implements OnMapReadyCallback
      * install it inside the SupportMapFragment. This method will only be triggered once the
      * user has installed Google Play services and returned to the app.
      */
-    @Override
-
-
     public void onMapReady(GoogleMap googleMap) { //google map point
+        GoogleMap mMap = googleMap;
+
         LatLng AlbanyWaterBoard = new LatLng(42.6704464, -73.7322982);
         googleMap.addMarker(new MarkerOptions().position(AlbanyWaterBoard).title("Albany Water Board"));
         googleMap.moveCamera(CameraUpdateFactory.newLatLng(AlbanyWaterBoard));
@@ -61,10 +64,37 @@ public class MainMap extends AppCompatActivity implements OnMapReadyCallback
         LatLng WashingtonParkInn = new LatLng(42.6564274, -73.7750971);
         googleMap.addMarker(new MarkerOptions().position(WashingtonParkInn).title("Washington Park Inn"));
         googleMap.moveCamera(CameraUpdateFactory.newLatLng(WashingtonParkInn));
-    }
-    
 
-    private ImageButton mapButton, bookmarkButton, tripButton, profileButton;
+        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(WashingtonParkInn,11));
+           /*
+        mMap.setOnMarkerClickListener(new GoogleMap.OnMarkerClickListener() {
+            @Override
+
+            public boolean onMarkerClick(Marker marker) {
+                if (marker.getTitle().equals("Albany Water Board")){
+                    Intent intent = new Intent(MainMap.this, AlbanyImage.class);
+                    startActivity(intent);
+                    return false;
+                }
+                if (marker.getTitle().equals("Albany Feura Bush Plant")){
+                    Intent intent = new Intent(MainMap.this, AlbanyImage.class);
+                    startActivity(intent);
+                    return false;
+                }
+                if (marker.getTitle().equals("Washington Park Inn")){
+                    Intent intent = new Intent(MainMap.this, AlbanyImage.class);
+                    startActivity(intent);
+                    return false;
+                }
+
+                else{
+                    return true;
+                }
+
+            });
+        }
+        */
+    }
 
     public void onClick(View v){
         switch (v.getId()){

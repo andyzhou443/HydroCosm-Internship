@@ -20,7 +20,19 @@ import com.google.android.gms.maps.model.MarkerOptions;
 public class MainMap extends AppCompatActivity implements OnMapReadyCallback
 {
 
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main_map);
 
+        mapButton = (ImageButton) findViewById(R.id.mapButton);
+        bookmarkButton = (ImageButton) findViewById(R.id.bookmarkButton);
+        tripButton = (ImageButton) findViewById(R.id.tripButton);
+        profileButton = (ImageButton) findViewById(R.id.profileButton);
+        // Get a handle to the fragment and register the callback.
+        SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
+                .findFragmentById(R.id.map);
+        mapFragment.getMapAsync(this);
 
     }
 
@@ -88,18 +100,6 @@ public class MainMap extends AppCompatActivity implements OnMapReadyCallback
                 Toast.makeText(MainMap.this, "Feature not Implemented", Toast.LENGTH_SHORT).show();
                 break;
         }
-    }
-
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main_map);
-
-        mapButton = (ImageButton) findViewById(R.id.mapButton);
-        bookmarkButton = (ImageButton) findViewById(R.id.bookmarkButton);
-        tripButton = (ImageButton) findViewById(R.id.tripButton);
-        profileButton = (ImageButton) findViewById(R.id.profileButton);
-
     }
 }
 

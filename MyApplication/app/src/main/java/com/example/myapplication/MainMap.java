@@ -65,12 +65,9 @@ public class MainMap extends AppCompatActivity implements OnMapReadyCallback
         googleMap.addMarker(new MarkerOptions().position(WashingtonParkInn).title("Washington Park Inn"));
         googleMap.moveCamera(CameraUpdateFactory.newLatLng(WashingtonParkInn));
 
-        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(WashingtonParkInn,11));
-
-/*
+        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(WashingtonParkInn, 11));
         mMap.setOnMarkerClickListener(new GoogleMap.OnMarkerClickListener() {
             @Override
-
             public boolean onMarkerClick(Marker marker) {
                 if (marker.getTitle().equals("Albany Water Board")) {
                     Intent intent = new Intent(MainMap.this, WaterBoardImage.class);
@@ -90,23 +87,8 @@ public class MainMap extends AppCompatActivity implements OnMapReadyCallback
                     return true;
                 }
 
-            })
-        }
-                */
-    }
-
-    @Override
-    public boolean onMarkerClick(final LatLng marker) {
-
-        if (marker.latitude == 42.6704464) {
-            Intent intent = new Intent(MainMap.this, WaterBoardImage.class);
-            startActivity(intent);
-            return false;
-        }
-
-        else{
-            return true;
-        }
+            }
+        });
     }
 
     public void onClick(View v){

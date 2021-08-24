@@ -66,34 +66,47 @@ public class MainMap extends AppCompatActivity implements OnMapReadyCallback
         googleMap.moveCamera(CameraUpdateFactory.newLatLng(WashingtonParkInn));
 
         mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(WashingtonParkInn,11));
-           /*
+
+/*
         mMap.setOnMarkerClickListener(new GoogleMap.OnMarkerClickListener() {
             @Override
 
             public boolean onMarkerClick(Marker marker) {
-                if (marker.getTitle().equals("Albany Water Board")){
-                    Intent intent = new Intent(MainMap.this, AlbanyImage.class);
+                if (marker.getTitle().equals("Albany Water Board")) {
+                    Intent intent = new Intent(MainMap.this, WaterBoardImage.class);
                     startActivity(intent);
                     return false;
                 }
-                if (marker.getTitle().equals("Albany Feura Bush Plant")){
-                    Intent intent = new Intent(MainMap.this, AlbanyImage.class);
+                if (marker.getTitle().equals("Albany Feura Bush Plant")) {
+                    Intent intent = new Intent(MainMap.this, FeuraImage.class);
                     startActivity(intent);
                     return false;
                 }
-                if (marker.getTitle().equals("Washington Park Inn")){
-                    Intent intent = new Intent(MainMap.this, AlbanyImage.class);
+                if (marker.getTitle().equals("Washington Park Inn")) {
+                    Intent intent = new Intent(MainMap.this, WashingtonParkImage.class);
                     startActivity(intent);
                     return false;
-                }
-
-                else{
+                } else {
                     return true;
                 }
 
-            });
+            })
         }
-        */
+                */
+    }
+
+    @Override
+    public boolean onMarkerClick(final LatLng marker) {
+
+        if (marker.latitude == 42.6704464) {
+            Intent intent = new Intent(MainMap.this, WaterBoardImage.class);
+            startActivity(intent);
+            return false;
+        }
+
+        else{
+            return true;
+        }
     }
 
     public void onClick(View v){
